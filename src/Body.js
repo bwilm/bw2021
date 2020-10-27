@@ -1,8 +1,7 @@
 import React from 'react'
 import './Body.css'
 import {Button} from '@material-ui/core'
-import ReactTypingEffect from 'react-typing-effect';
-
+import Typist from 'react-typist';
 function Body() {
 
 
@@ -11,9 +10,15 @@ function Body() {
             <div className="body_text">
                 <div className="body_row">
 
-                    <h1><ReactTypingEffect text="design." cursor=" "/></h1>
-                    <h1><ReactTypingEffect typingDelay={3000} cursor=" " text="develop."/></h1>
-                    <h1><ReactTypingEffect typingDelay={5000} cursor=" " text="deliver."/></h1>
+
+                    <Typist>
+                        <h1>design.</h1>
+                    <Typist.Delay ms={500} />
+                        <h1>develop.</h1>
+                    <Typist.Delay ms={500} />
+                        <h1>deploy.</h1>
+                    </Typist>
+                    
    
                 </div>
             </div>
